@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-image: url('jakpost.travel-hd-wallpapers-for-website-1572321.jpg');
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+{text-align: center;}
+
+.dropbtn {
+  background-color:white;
+  color: black;
+  padding: 16px;
+  font-size: 15px;
+  border: none;
+
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: grey;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.container {
+  padding: 16px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 25%; 
+  height: 50%; 
+  overflow: auto; 
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;  
+  border: 1px solid #888;
+  width: 50%; 
+}
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+</style>
+</head>
+<body style="background-color:grey" >
+
+  
+<h1 style="text-align:center;">UPLOAD SHEET</h1>
+
+<hr>
+<div class="dropdown" class="dropdown"style = "position:absolute; right:800px; top:100px;">
+  <button onclick="myFunction1()" class="dropbtn">SUBJECT</button>
+  <div id="myDropdown1" class="dropdown-content">
+    <a href="#physics">PHYSICS</a>
+    <a href="#chemistry">CHEMISTRY</a>
+    <a href="#biology">BIOLOGY</a>
+  </div><br><br>
+
+
+
+<div class="dropdown" class="dropdown"style = "position:absolute; right:-150px; top:200px;">
+  <button onclick="myFunction2()" class="dropbtn">CLASS</button>
+  <div id="myDropdown2" class="dropdown-content">
+    <a href="#4">4</a>
+    <a href="#chemistry">5</a>
+    <a href="#biology">6</a>
+  </div><br><br>
+
+<div class="dropdown" class="dropdown"style = "position:absolute; right:140px; top:-100px;"">
+  <button onclick="myFunction3()" class="dropbtn">QUESTION NUMBER</button>
+  <div id="myDropdown3" class="dropdown-content">
+    <a href="#1">1</a>
+    <a href="#2">2</a>
+    <a href="#3">3</a>
+    <a href="#4">4</a>
+    <a href="#5">5</a>
+
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction1() {
+  document.getElementById("myDropdown1").classList.toggle("show");
+}
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+function myFunction3() {
+  document.getElementById("myDropdown3").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<form action="/action_page.php">
+ <br><br>
+ <label for="img">Select image:</label>
+  <input type="file" id="img" name="img" accept="image/*">
+<BR><br>
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">SUBMIT</button>
+      </div>
+</form>
+
+</body>
+</html>
